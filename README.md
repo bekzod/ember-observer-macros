@@ -1,26 +1,39 @@
 # ember-observer-macros
 
-This README outlines the details of collaborating on this Ember addon.
+Adds few observer macros to avoid calling observer function to often
+
+# Importing/ Usage
+`import { observerOnce, observerDebounce, observerThrottle } from 'ember-observer-macros';`
+
+
+### observerOnce
+Calls observer function once in run loop
+
+```javascript
+
+nameChanged: observerOnce('propName1', 'propName2', function() {})
+
+```
+
+
+### observerDebounce
+Debounces observer function 
+
+```javascript
+
+nameChanged: observerDebounce('propName1', 'propName2', function() {}, 200)
+
+```
+
+### observerThrottle
+Throttles observer function
+
+```javascript
+
+nameChanged: observerThrottle('propName1', 'propName2', function() {}, 200)
+
+```
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-observer-macros`
-* `npm install`
-
-## Running
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+* `ember install ember-observer-macros` 

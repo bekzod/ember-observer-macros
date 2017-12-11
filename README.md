@@ -1,4 +1,4 @@
-# ember-observer-macros
+# ember-observer-macros [![Ember Observer Score](http://emberobserver.com/badges/ember-slack-search-input.svg)](http://emberobserver.com/addons/ember-observer-macros) [![npm version](https://badge.fury.io/js/ember-observer-macros.svg)](https://badge.fury.io/js/ember-slack-search-input) [![travis status](https://travis-ci.org/bekzod/ember-observer-macros.svg)](https://travis-ci.org/bekzod/ember-observer-macros.svg)
 
 Adds few observer macros to avoid calling observer function too often
 

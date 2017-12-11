@@ -15,14 +15,14 @@ test('parses arguments correctly', function(assert) {
   let cb = function() {};
   let obj = EmberObject.extend({
     'hero': '',
-    onHeroChange: observerThrottle('hero', cb, true, 200),
+    onHeroChange: observerThrottle('hero', cb, 200, true),
   }).create();
 
   assert.equal(lastCallArgs, null);
 
   obj.set('hero', 'spiderman');
 
-  assert.deepEqual(lastCallArgs, [obj, cb, true, 200]);
+  assert.deepEqual(lastCallArgs, [obj, cb, 200, true]);
 
   run.throttle = originalThrottle;
 });

@@ -15,14 +15,14 @@ test('parses arguments correctly', function(assert) {
   let cb = function() {};
   let obj = EmberObject.extend({
     'hero': '',
-    onHeroChange: observerDebounce('hero', cb, true, 200)
+    onHeroChange: observerDebounce('hero', cb, 200, true)
   }).create();
 
   assert.equal(lastCallArgs, null);
 
   obj.set('hero', 'batman');
 
-  assert.deepEqual(lastCallArgs, [obj, cb, true, 200]);
+  assert.deepEqual(lastCallArgs, [obj, cb, 200, true]);
 
   run.debounce = originalDebounce;
 });

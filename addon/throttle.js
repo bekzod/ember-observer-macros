@@ -2,14 +2,17 @@ import Ember from 'ember';
 const { observer, run } = Ember;
 
 export default function observerThrottle(...args) {
-  let lastValue = args[args.length - 1];
-  let wait = typeof lastValue === 'number' ? args.pop() : 0;
-  let func = args.pop();
+  let observerArgs = [];
 
-  let wrappedFunc = function() {
-    run.throttle(this, func, wait);
+  while (typeof args[0] === 'string') {
+    observerArgs.push(args.shift());
   }
 
-  args.push(wrappedFunc);
-  return observer(...args);
+  let wrappedFunc = function() {
+    run.throttle(this, ...args);
+  }
+
+  observerArgs.push(wrappedFunc);
+
+  return observer(...observerArgs);
 }

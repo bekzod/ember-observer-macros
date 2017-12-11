@@ -1,12 +1,12 @@
 {
   "name": "ember-observer-macros",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Ember observer macros",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "bekzod@me.com",
   "directories": {
     "doc": "doc",
     "test": "tests"

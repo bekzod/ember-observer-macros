@@ -1,3 +1,9 @@
-export { default as observerDebounce } from './debounce';
-export { default as observerOnce } from './once';
-export { default as observerThrottle } from './throttle';
+import { default as observerDebounce } from './debounce';
+import { default as observerOnce } from './once';
+import { default as observerThrottle } from './throttle';
+
+export default {
+  observerDebounce,
+  observerOnce,
+  observerThrottle
+};

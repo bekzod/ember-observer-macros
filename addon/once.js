@@ -1,6 +1,7 @@
+import Ember from 'ember';
 const { observer, run } = Ember;
 
-default export function observerOnce(args) {
+export default function observerOnce(...args) {
   let func = args.pop();
 
   let wrappedFunc = function() {

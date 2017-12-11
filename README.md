@@ -1,6 +1,6 @@
 # ember-observer-macros
 
-Adds few observer macros to avoid calling observer function to often
+Adds few observer macros to avoid calling observer function too often
 
 # Importing/ Usage
 `import { observerOnce, observerDebounce, observerThrottle } from 'ember-observer-macros';`

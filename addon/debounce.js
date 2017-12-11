@@ -12,26 +12,3 @@ default export function observerDebounce(args) {
   args.push(wrappedFunc);
   return observer(...args);
 }
-
-
-
-let obj = EmberObject.create({
-
-  hero: '',
-
-  onHeroChange: observerDebounce('hero', function() {
-
-  }, 200);
-
-})
-
-run(()=> {
-  obj.set('hero', 'batman');
-});
-
-run(()=> {
-  obj.set('hero', 'spiderman');
-});
-run(()=> {
-  obj.set('hero', 'emberman');
-});

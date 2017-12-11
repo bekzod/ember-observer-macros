@@ -1,5 +1,5 @@
-import Ember from 'ember';
-const { observer, run } = Ember;
+import { run } from '@ember/runloop';
+import { observer } from "@ember/object"
 
 export default function observerDebounce(...args) {
   let observerArgs = [];
